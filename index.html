@@ -1,0 +1,69 @@
+<html>
+    <head>
+       <title>My Selfie App</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="style.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+</head>
+ 
+<body>
+    
+    <p>Click the button to wait 3 seconds, then alert "Hello".</p>
+
+    <button onclick="normalButton()">Normal Button</button>
+
+    <br>
+    <br>
+
+    <button onclick="setTimeOutButton()">Set time out button</button>
+
+    <script>
+        function normalButton(){
+            alert("normal Button");
+        }
+
+        function setTimeOutButton(){
+            setTimout(
+                function(){
+                    alert("set TimeOut button");
+                }, 3000);
+        }
+    </script>
+
+    <div class="container">
+    <center>
+        <a href="" id="link" download="selfie.jpeg"></a>
+        <h1>Voice Selfie App 
+        <img id="logo_img" src="">
+        </h1>
+        <hr>
+        <h4 style="color:red;">Please press allow as soon as popup comes. After you give a voice command</h4>
+        
+        <div class="form-group">
+            <h3>Say "take my selfie"</h3>
+            <label>Your voice output : </label>
+            <textarea cladd="form-control" id="textbox" readonly="true"></textarea>
+        </div>
+        
+        <button class="btn btn-primary" onclick="start()">Take Selfie</button>
+        <p>Press the 'Take Selfie' button</p>
+
+        <label>Your Webcam: </label>
+        <div id="camera"></div>
+        <br>
+
+        <label>Your Selife Will Display Here: </label>
+        <div id="result"></div></div>
+    
+    </center>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
